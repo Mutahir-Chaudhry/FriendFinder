@@ -167,8 +167,16 @@
                         parseInt(question1), parseInt(question2), parseInt(question3), parseInt(question4), parseInt(question5), parseInt(question6), parseInt(question7), parseInt(question8), parseInt(question9), parseInt(question10)
                     ]
                 };
+            $.post("/api/friends", newFriend, function(data){
+                if (data){
+                    console.log("Best match: " + data)
+                }else{
 
-                console.log(newFriend)
+                }
+                $("name").val("");
+                $("#pic").val("");
+            });
+
             }
 
         })
