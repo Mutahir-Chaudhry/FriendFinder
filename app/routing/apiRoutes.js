@@ -27,7 +27,8 @@ app.post("/api/friends", function(req,res){
             bestScore = score;
         }
     }
-   
+   friends.push(newFriend);
+   res.json(match);
 });
 
 };
