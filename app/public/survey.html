@@ -188,8 +188,11 @@
                 $.post("/api/friends", newFriend, function (data) {
                     if (data) {
                         console.log("Best match: " + data)
+                        $("#matchName").text("Your match is: " + data.name);
+                        $("matchPic").attr("src", data.pic);
+                        $("#match-modal").modal("toggle");
                     } else {
-
+                        alert("Sorry, there are no matches at this time :(")
                     }
                     $("name").val("");
                     $("#pic").val("");
