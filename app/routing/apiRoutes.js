@@ -1,3 +1,14 @@
+const friendData = require("../data/friends");
+
+function compare(user, friend){
+    const difference = 0;
+    for (var i = 0; i < user.length; i++){
+        difference += Math.abs(user[i] - friend[i]);
+    }
+    return difference;
+}
+
+
 //GET route to display all possible friends
 app.get("/api/friends", function(req,res){
     return res.json(friends);
