@@ -1,3 +1,4 @@
+var path = require("path");
 //Adding GET route for survey page
 module.exports = function (app) {
     app.get("/home", function (req, res) {
