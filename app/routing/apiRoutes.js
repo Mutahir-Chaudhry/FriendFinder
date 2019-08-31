@@ -1,7 +1,7 @@
-const friends = require("../data/friends");
+var friends = require("../data/friends");
 
 function compare(user, friend) {
-    const difference = 0;
+    var difference = 0;
     for (var i = 0; i < user.length; i++) {
         difference += Math.abs(user[i] - friend[i]);
     }
@@ -16,8 +16,8 @@ module.exports = function (app) {
     //POST route to handle incoming survey results and compatibility logic
     app.post("/api/friends", function (req, res) {
 
-        const newFriend = req.body;
-        const bestScore = 101;
+        var newFriend = req.body;
+        var bestScore = 101;
         var match;
 
         for (var i = 0; i < friends.length; i++) {
