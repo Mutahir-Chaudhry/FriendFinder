@@ -2,7 +2,7 @@
 
 Welcome to FriendFinder! FriendFinder is a one of a kind browser run node application that helps match our user with a friend by taking a 10-question survey.
 
-Some specific technologies used in this application include AJAX, Bootstrap, JQuery, path, express, and modals. 
+Some specific technologies used in this application include AJAX, Bootstrap, JQuery, path, express, and modals. You can also follow this link to the deployed version on Heroku https://calm-atoll-11078.herokuapp.com/ 
 
 From a high-level perspective, this application takes in user input via a form, adds their statistics to an existing array of friends, and compares their statistics to find they're closest match within the existing array of friends. 
 
