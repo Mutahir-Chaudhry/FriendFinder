@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <style>
         body {
-            background-image: url("../images/Friends.jpg");
+            background-image: url("http://thewowstyle.com/wp-content/uploads/2015/02/people-jumping-silhouettes-beach-water-reflections-sunset.jpg");
             background-size: 100%;
             background-attachment: fixed;
             color: white;
@@ -21,6 +21,13 @@
 
         .jumbotron {
             background: none
+        }
+        #youCanDoIt{
+            position:fixed;
+            width: 45%;
+            height: 50%; 
+            padding: 2%;
+            bottom: 10%;
         }
     </style>
 </head>
@@ -30,8 +37,10 @@
         <h1 class="display-4">Welcome to the FriendFinder Survey!</h1>
         <p class="lead">To begin, please type in your name and provide a photo url for your profile image. After that,
             you will find a survey form below comprised of 10 different survey questions. Below each question, you will see a scale of 1 to 5. Choose a number based on how much you agree or disagree with the question, with 1 being strongly disagree,
-            and 5 being strongly agree. Once finished, click the submit button, and FriendFinder will find you your perfect match!</p>
-        <a class="btn btn-danger btn-lg" href="/home" role="button">Go back to the home page!</a>
+            and 5 being strongly agree. Once finished, click the submit button, and FriendFinder will find you your perfect match! Follow the links below to check out our Friends API, or go back to the home page.</p>
+            <div>
+                <h2><a href="/api/friends">Friends API</a>|<a href="/home">Go back to the home page!</a></h2>
+            </div>
     </div>
     </div>
     <hr>
@@ -150,9 +159,12 @@
                     <button id="submit" type="submit" class="btn btn-primary">Submit your survey!</button>
                 </form>
             </div>
+            <div class="col-md-6">
+                    <img src="https://media.giphy.com/media/xT4uQCnq6bDx8itLhK/giphy.gif" alt="You-can-do-it" id="youCanDoIt">
+                </div>
         </div>
     </div>
-    <div id="match-modal" class="modal" tabindex="-1" role="dialog">
+    <div id="matchModal" class="modal" tabindex="-1" role="dialog" style="color:black">
         <div class="modal-dialogue" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -204,8 +216,8 @@
                     if (data) {
                         console.log("Best match: " + data)
                         $("#matchName").text("Your match is: " + data.name);
-                        $("matchPic").attr("src", data.pic);
-                        $("#match-modal").modal("toggle");
+                        $("matchPic").attr("src", data.photo);
+                        $("#matchModal").modal("toggle");
                     } else {
                         alert("Sorry, there are no matches at this time :(")
                     }
