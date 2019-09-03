@@ -31,3 +31,5 @@ Once the user has filled out all the required fields, chosen a response to each 
 If the user now clicks the Friends API link, we can see the highlighted new object is our user, added as a new friend to the array, with their respective statistics (See Figure 6). They will now be able to be used in later survey submissions for further comparison and friend match-ups. 
 
 ![Figure 6](https://github.com/Mutahir-Chaudhry/FriendFinder/blob/master/app/images/FriendFinder%20-%20Figure%206.png)
+
+I, Mutahir Chaudhry, created and maintain this FriendFinder application, and can be contacted in you have any questions or need points of clarification.
